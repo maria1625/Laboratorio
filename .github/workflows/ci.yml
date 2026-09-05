@@ -1,0 +1,29 @@
+name: test build
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Crear entorno virtual
+        run: python -m venv .venv
+
+      - name: Instalar requisitos
+        run: .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Ejecutar pruebas
+        run: .venv/bin/python -m unittest -v test_calculadora.py
