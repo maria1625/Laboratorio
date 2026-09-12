@@ -34,6 +34,12 @@ python .\calculadora.py
 python -m unittest -v .\test_calculadora.py
 ```
 
+### Ejecutar linting
+
+```bash
+ruff check .
+```
+
 ### Integración continua
 
 El workflow de [GitHub Actions](.github/workflows/ci.yml) ejecuta las pruebas
