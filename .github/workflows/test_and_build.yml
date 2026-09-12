@@ -29,5 +29,8 @@ jobs:
       - name: Instalar requisitos
         run: .venv/bin/python -m pip install -r requirements.txt
 
+      - name: Ejecutar linting 
+        run: .venv/bin/ruff check .
+
       - name: Ejecutar pruebas
         run: .venv/bin/python -m unittest -v test_calculadora.py
