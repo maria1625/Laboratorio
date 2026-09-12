@@ -42,7 +42,7 @@ ruff check .
 
 ### Integración continua
 
-El workflow de [GitHub Actions](.github/workflows/ci.yml) ejecuta las pruebas
+El workflow de [GitHub Actions](.github/workflows/test_and_build.yml) ejecuta las pruebas
 automáticamente en cada `push` de cualquier rama y en los `pull request` cuyo
 destino sea `main`. Crea su propio entorno virtual
 para mantener aislado el entorno de CI e instala las dependencias definidas en
