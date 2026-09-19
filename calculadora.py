@@ -1,4 +1,4 @@
-"""Calculadora sencilla para usar desde consola o como módulo."""
+"""Calculadora para usar desde consola o como módulo."""
 
 
 def sumar(primer_numero, segundo_numero):
@@ -27,7 +27,7 @@ def ejecutar_calculadora():
         "/": dividir,
     }
 
-    print("Calculadora sencilla (escribe 'salir' para terminar)")
+    print("Calculadora (escribe 'salir' para terminar)")
     while True:
         operacion = input("Operación (+, -, *, /): ").strip()
         if operacion.lower() == "salir":
